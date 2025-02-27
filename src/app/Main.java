@@ -38,7 +38,7 @@ public class Main {
             }
             else {
                 balance = getBalance(balance, withdrawal);
-                System.out.printf("Funds are OK. Purchase paid." + "%nBalance is %.2f", balance);
+                System.out.printf("Funds are OK. Purchase paid." + "%nBalance is USD %.2f", balance);
             }
         } catch (FundsException e) {
             System.out.println(e.getMessage());
