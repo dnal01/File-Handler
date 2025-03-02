@@ -3,5 +3,6 @@ public class Main {
 
         System.out.println("Calculator Supper!");
         System.out.println("App Version 1.0");
+        System.out.println("Calculator method");
     }
 }
