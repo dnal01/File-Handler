@@ -17,6 +17,6 @@ public class Main {
     private static void getOutput(String output) {
         System.out.println(output);
         System.out.println("App version 1.0");
-        System.out.println("01_2V_Initial");
+        System.out.println("01_3V_Initial");
     }
 }
