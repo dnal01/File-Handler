@@ -1,22 +1,22 @@
 package app;
 
+import app.model.FileHandler;
+import app.units.Constants;
+
 public class Main {
+    static String fileName;
+    static String filePath;
+    static String fileContent;
 
     public static void main(String[] args) {
-
-        DataProvider provider = new DataProvider();
-        DataHandler dataHandler = new DataHandler();
-
-        String namesOutput = dataHandler.handleData(provider.getProductNames());
-        getOutput("Products: " + namesOutput);
-
-        String salesOutput = dataHandler.handleData(provider.getSalesAmounts());
-        getOutput("Sales, EUR: " + salesOutput);
+        fileName = "myfile.txt";
+        filePath = Constants.BASE_PATH + fileName;
+        fileContent = "My very important information.";
+        getOutput("RESULT: " + FileHandler.writeFile(filePath, fileContent));
+        getOutput("FILE CONTENT: " + FileHandler.readFile(filePath));
     }
 
     private static void getOutput(String output) {
         System.out.println(output);
-        System.out.println("App version 1.0");
-        System.out.println("01_7V_Initial");
     }
 }
