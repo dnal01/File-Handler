@@ -1,19 +1,19 @@
 package app;
 
-import app.model.FileHandler;
-import app.units.Constants;
+import java.nio.file.Paths;
 
 public class Main {
-    static String fileName;
-    static String filePath;
-    static String fileContent;
+    private static final String BASE_PATH = "files/";
 
     public static void main(String[] args) {
-        fileName = "myfile.txt";
-        filePath = Constants.BASE_PATH + fileName;
-        fileContent = "My very important information.";
-        getOutput("RESULT: " + FileHandler.writeFile(filePath, fileContent));
-        getOutput("FILE CONTENT: " + FileHandler.readFile(filePath));
+        FileHandler handler = new FileHandler();
+        String newFileName = "myfile";
+        String content = "Super information.";
+        String path = BASE_PATH + newFileName + ".txt";
+
+        getOutput(handler.createFile(path));
+        getOutput(handler.writeToFile(Paths.get(path), content));
+        getOutput("CONTENT: " + handler.readFromFile(path));
     }
 
     private static void getOutput(String output) {
