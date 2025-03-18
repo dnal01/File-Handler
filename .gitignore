@@ -5,6 +5,7 @@ out/
 
 .idea/
 *.iml
+.src/app/Customers01.java
 
 ### Eclipse ###
 .apt_generated
