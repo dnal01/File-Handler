@@ -1,13 +1,14 @@
 package app;
 
+
 public class Main {
 
     public static void main(String[] args) {
-        DataHandler dataHandler = new DataHandler();
-        MyThread myThread1 = new MyThread("Thread 1", dataHandler);
-        MyThread myThread2 = new MyThread("Thread 2", dataHandler);
-        myThread1.start();
-        myThread2.start();
+        // Через конструктор зазначаємо ім'я потоку
+        MyThread01 thread01 = new MyThread01("Thread 1");
+        MyThread01 thread02 = new MyThread01("Thread 2");
+        // Стартуємо потоки
+        thread01.start();
+        thread02.start();
     }
 }
-
