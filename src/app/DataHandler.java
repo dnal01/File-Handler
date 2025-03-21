@@ -19,7 +19,7 @@ public class DataHandler {
     public String formListOutput(List<String> list) {
         StringBuilder sb = new StringBuilder();
         AtomicInteger count = new AtomicInteger(1);
-        for (name : list) {
+        for (String name : list) {
             sb.append(String.("%d) %s%n",
                     count.getAndIncrement(), name));
         }
