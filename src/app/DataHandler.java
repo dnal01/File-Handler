@@ -20,7 +20,7 @@ public class DataHandler {
         StringBuilder sb = new StringBuilder();
         AtomicInteger count = new AtomicInteger(1);
         for (String name : list) {
-            sb.append(String.("%d) %s%n",
+            sb.append(String.format("%d) %s%n",
                     count.getAndIncrement(), name));
         }
         return "\nNames:\n" + sb;
