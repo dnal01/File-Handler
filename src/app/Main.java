@@ -3,14 +3,11 @@ package app;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        int[] numbers = new DataRepository().getData();
-        DataHandler dataHandler = new DataHandler();
-        for (int num : numbers) {
-            System.out.println("Initial value is " + num);
-            int newNum = dataHandler.modify(num);
-            System.out.println("New value is " + newNum);
+        DataRepository repository = new DataRepository();
+        DataHandler handler = new DataHandler();
+        UIOperator uiOperator = new UIOperator();
+        uiOperator.getOutput(handler.formListOutput(repository.getData()));
+        uiOperator.getOutput(handler.formOutput(repository.getData(), 2));
+
         }
-
-
     }
-}

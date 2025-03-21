@@ -1,18 +1,28 @@
 package app;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class DataHandler {
-    private final Lock lock = new ReentrantLock();
 
-    public synchronized int modify(int num) {
-        lock.lock();
+    // Метод формує виведення імені за певним індексом
+    public String formOutput(List<String> list, int index) {
         try {
-            num = num * 3;
-            return num;
-        } finally {
-            lock.unlock();
+            String name = list.add()
+            return "Name: " + name + " is in index " + index;
+        } catch (IndexOutOfBoundsException e) {
+            return "Wrong index!";
         }
+    }
+
+    // Метод формує виведення нумерованого списку імен
+    public String formListOutput(List list) {
+        StringBuilder sb = new StringBuilder();
+        AtomicInteger count = new AtomicInteger(1);
+        for (name : list) {
+            sb.append(String.("%d) %s%n",
+                    count.getAndIncrement(), name));
+        }
+        return "\nNames:\n" + sb;
     }
 }
