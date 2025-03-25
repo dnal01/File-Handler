@@ -16,13 +16,13 @@ public class DataHandler {
                 sb.append(String.format("%d) %d, %s%n",
                         count.incrementAndGet(),id, name)
                 ));
-        return "\\nALL NAMES:\\n" + sb;
+        return "\nALL NAMES:\n" + sb;
     }
 
     // Метод формує виведення імені за певним id
     public String getById(int id) {
         if (map.containsKey(id)) {
-            return "\\nNAME: id " + id + ", " +
+            return "\nNAME: id " + id + ", " +
                     map.get(id);
         } else return "No data!";
        }
