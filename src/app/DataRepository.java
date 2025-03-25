@@ -1,16 +1,12 @@
 package app;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DataRepository {
-    public List<String> getData() {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("Alice");
-        list.add("Bob");
-        list.add("Lucy");
-        list.add("Denis");
-        list.add("Tom");
-        return list;
+     public Map<Integer, String> getData() {
+        Map<Integer, String> map = new HashMap<>();
+
+        return map;
     }
 }
