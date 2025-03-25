@@ -1,6 +1,7 @@
 package app;
 
 import java.util.Map;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class DataHandler {
@@ -24,8 +25,7 @@ public class DataHandler {
             return "\\nNAME: id " + id + ", " +
                     map.get(id);
         } else return "No data!";
-    }
-    }
+       }
 
     // Метод формує виведення нумерованого списку імен
     public String formListOutput(List<String> list) {
@@ -35,6 +35,6 @@ public class DataHandler {
             sb.append(String.format("%d) %s%n",
                     count.getAndIncrement(), name));
         }
-        return "\nNames:\n" + sb;
+        return "\nNames:\n" + sb.toString();
     }
 }
