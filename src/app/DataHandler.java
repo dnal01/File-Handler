@@ -22,7 +22,7 @@ public class DataHandler {
     public String getById(int id) {
         if (coKey(id)) {
             return "\\nNAME: id " + id + ", " +
-                    map.put(id);
+                    map.get(id);
         } else return "No data!";
     }
     }
