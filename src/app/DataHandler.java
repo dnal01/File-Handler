@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class DataHandler {
 
-   Map<Integer, String> map = new DataRepository();
+   Map<Integer, String> map = new DataRepository().getData();
 
     // Метод формує виведення нумерованого переліку імен
     public String getAll() {
