@@ -20,6 +20,7 @@ public class ClothChoiseView {
         System.out.println("Please enter the color you want to add");
         cloth.put("Color", s.nextLine());
         System.out.println("Please enter the price you want to add");
+        // Right now price is not validate. Can be added a validator.
         cloth.put("Price", s.nextLine());
 
         return cloth;

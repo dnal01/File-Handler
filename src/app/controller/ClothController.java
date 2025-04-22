@@ -12,6 +12,7 @@ public class ClothController {
     PriceCalculatorService priceCalculatorService = new PriceCalculatorService();
 
     public void appStart() {
+        // Getting Cloth details and save in Map. Can be updated by using dynamic amount of clothes.
         Map<String, String> clothChoise1 = clothChoiseView.getCloth();
         Map<String, String> clothChoise2 = clothChoiseView.getCloth();
         BuilderService clothBuilderService = new BuilderService();
