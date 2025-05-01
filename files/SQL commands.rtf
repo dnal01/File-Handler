@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 [2025-05-01 08:46:58] Connected\
+> SELECT user()\
+[2025-05-01 08:46:59] 1 row retrieved starting from 1 in 324 ms (execution: 5 ms, fetching: 319 ms)\
+> CREATE TABLE IF NOT EXISTS orders\
+  ( id BIGINT NOT NULL AUTO_INCREMENT,\
+    time DATE NOT NULL,\
+    client_id SMALLINT NOT NULL,\
+    discount TINYINT NOT NULL,\
+    total_price DECIMAL(6,2) NOT NULL,\
+    employee_id TINYINT NOT NULL,\
+    status VARCHAR(32) NOT NULL,\
+    PRIMARY KEY (id)\
+  )\
+[2025-05-01 09:10:24] [3D000][1046] No database selected\
+> USE demo_db\
+[2025-05-01 09:12:05] completed in 1 ms\
+demo_db> CREATE TABLE IF NOT EXISTS orders\
+         ( id BIGINT NOT NULL AUTO_INCREMENT,\
+           time DATE NOT NULL,\
+           client_id SMALLINT NOT NULL,\
+           discount TINYINT NOT NULL,\
+           total_price DECIMAL(6,2) NOT NULL,\
+           employee_id TINYINT NOT NULL,\
+           status VARCHAR(32) NOT NULL,\
+           PRIMARY KEY (id)\
+         )\
+[2025-05-01 09:12:11] completed in 9 ms\
+demo_db> INSERT INTO orders\
+         (time, client_id, discount, total_price, employee_id, status)\
+         VALUES\
+             (CURRENT_TIME(), 1, 0, 25, 1, 'Payed')\
+[2025-05-01 09:36:49] [22007][1292] Incorrect date value: '09:36:49' for column 'time' at row 1\
+[2025-05-01 09:36:49] 1 row affected in 13 ms\
+demo_db> DELETE FROM orders\
+         WHERE id = 1\
+[2025-05-01 09:39:36] 1 row affected in 4 ms\
+demo_db> ALTER TABLE orders MODIFY time DATETIME\
+[2025-05-01 09:40:52] completed in 18 ms\
+demo_db> INSERT INTO orders\
+         (time, client_id, discount, total_price, employee_id, status)\
+         VALUES\
+             (NOW(), 1, 0, 25, 1, 'Payed')\
+[2025-05-01 09:41:23] 1 row affected in 3 ms\
+}
