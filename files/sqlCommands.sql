@@ -1,3 +1,15 @@
+CREATE TABLE IF NOT EXISTS orders
+(
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    time DATETIME NOT NULL,
+    client_id SMALLINT NOT NULL,
+    discount TINYINT NOT NULL,
+    total_price DECIMAL(6,2) NOT NULL,
+    employee_id TINYINT NOT NULL,
+    status VARCHAR(32) NOT NULL,
+    PRIMARY KEY (id)
+);
+
 INSERT INTO orders
 (time, client_id, discount, total_price, employee_id, status)
 VALUES
