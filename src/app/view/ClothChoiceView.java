@@ -1,12 +1,12 @@
 package app.view;
 
-import app.repository.Cloth;
+import app.entity.Cloth;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class ClothChoiseView {
+public class ClothChoiceView {
     Map<String, String> cloth;
 
     public Map<String, String> getCloth() {
@@ -20,7 +20,7 @@ public class ClothChoiseView {
         System.out.println("Please enter the color you want to add");
         cloth.put("Color", s.nextLine());
         System.out.println("Please enter the price you want to add");
-        // Right now price is not validate. Can be added a validator.
+        // Right now price is not validated. Can be added a validator.
         cloth.put("Price", s.nextLine());
 
         return cloth;

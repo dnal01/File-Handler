@@ -1,6 +1,6 @@
-package app.repository;
+package app.entity;
 
-public class Cap implements Cloth {
+public class Shirt extends Cloth {
     String color;
     String price;
     String manufacturer;

@@ -1,14 +1,14 @@
 package app.controller;
 
-import app.repository.Cloth;
+import app.entity.Cloth;
 import app.service.BuilderService;
 import app.service.PriceCalculatorService;
-import app.view.ClothChoiseView;
+import app.view.ClothChoiceView;
 
 import java.util.Map;
 
 public class ClothController {
-    ClothChoiseView clothChoiseView = new ClothChoiseView();
+    ClothChoiceView clothChoiseView = new ClothChoiceView();
     PriceCalculatorService priceCalculatorService = new PriceCalculatorService();
 
     public void appStart() {
